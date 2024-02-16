@@ -9,7 +9,7 @@
 <body style ="margin: 50px;">
 	<h1>도시 수정</h1>
 	<hr>
-	<form action="/jw/ch07/city/update" method="post">
+	<form action="/jw/ch07/kcity/update" method="post">
 		<input type= "hidden" name="id" value="${city.id}">
 		<input type="text"  value="${city.id}" disabled ><br><br>
 		<input type="text" name="name" value="${city.name}"><br><br>
