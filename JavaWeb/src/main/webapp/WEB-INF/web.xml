@@ -139,4 +139,44 @@
     <servlet-name>KcityController</servlet-name>
     <url-pattern>/KcityController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Ex01_SetSession</display-name>
+    <servlet-name>Ex01_SetSession</servlet-name>
+    <servlet-class>ch09_cookie_session.Ex01_SetSession</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ex01_SetSession</servlet-name>
+    <url-pattern>/Ex01_SetSession</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Ex02_GerSession</display-name>
+    <servlet-name>Ex02_GerSession</servlet-name>
+    <servlet-class>ch09_cookie_session.Ex02_GerSession</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ex02_GerSession</servlet-name>
+    <url-pattern>/Ex02_GerSession</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Ex03_SetCookie</display-name>
+    <servlet-name>Ex03_SetCookie</servlet-name>
+    <servlet-class>ch09_cookie_session.Ex03_SetCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ex03_SetCookie</servlet-name>
+    <url-pattern>/Ex03_SetCookie</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Ex04_getCookie</display-name>
+    <servlet-name>Ex04_getCookie</servlet-name>
+    <servlet-class>ch09_cookie_session.Ex04_getCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ex04_getCookie</servlet-name>
+    <url-pattern>/Ex04_getCookie</url-pattern>
+  </servlet-mapping>
 </web-app>
