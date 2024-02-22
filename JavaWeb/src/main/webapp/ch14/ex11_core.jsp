@@ -37,7 +37,7 @@
 	<%-- 이름 열: 첫번째줄 배경색을 노랑, 마지막 줄 청록 --%>
 	<%-- 주소 열: 한국이면 배경색을 주황, 미국이면 하늘색 --%>
 	<table border="1">
-		<tr><th>아이디</th><th>이름</th><th>주소</th></tr>
+		<tr><th>아이디</th><th>이름</th><th>주소</th><th>인덱스</th></tr>
 	<c:forEach var="member" items="${members}" varStatus="loop">
 		<tr>
 			<td>	<%-- 아이디 열: 홀수면 글자색을 파랑 짝수면 빨강 --%>
@@ -66,7 +66,7 @@
 				<c:if test="${member.addr.country eq '미국'}">
 					<span style="background: skyblue">${member.addr}</span>
 				</c:if>
-				<c:if test="${member.addr.country ne ' 한국'  and  member.addr.country ne '미국'}">
+				<c:if test="${member.addr.country ne '한국'  and  member.addr.country ne '미국'}">
 					${member.addr}
 				</c:if>
 			</td>
