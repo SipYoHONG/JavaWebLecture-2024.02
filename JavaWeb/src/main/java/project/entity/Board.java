@@ -14,6 +14,13 @@ public class Board {
 	private String uname;			// users table과 join해서 얻게 될 내용
 	
 	public Board() { }
+	// 수정할 때 필요한 생성자
+	public Board(int bid, String title, String content) {
+		this.bid = bid;
+		this.title = title;
+		this.content = content;
+	}
+	
 	// 게시글 생성할 때 필요한 생성자
 	public Board(String title, String content, String uid) {
 		this.title = title;
@@ -21,13 +28,6 @@ public class Board {
 		this.uid = uid;
 	}
 	
-	// 수정할 때 필요한 생성자
-	public Board(int bid, String title, String content, String uid) {
-		this.bid = bid;
-		this.title = title;
-		this.content = content;
-		this.uid = uid;
-	}
 	
 	// 목록 조회시 필요한 생성자 
 	public Board(int bid, String title, LocalDateTime modTime, int viewCount, int replyCount,
