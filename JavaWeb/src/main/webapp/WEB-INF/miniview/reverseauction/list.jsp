@@ -23,14 +23,13 @@
 	
 	<div class="container" style="margin-top:80px">
 		<div class="row">
-			<%@ include file="../common/_aside.jspf" %>
 			
 			<div class="col-9">
 				<table class="table table-sm table-borderless">
 					<tr>
 						<td style="width: 52%; text-align: left">
 							<h3><strong class="me-5">게시글 목록</strong>
-								<span style="font-size:16px"><a href="/jw/bbs/board/insert"><i class="fa-solid fa-pen-to-square"></i> 글 쓰기</a></span>
+								<span style="font-size:16px"><a href="#"><i class="fa-solid fa-pen-to-square"></i> 글 쓰기</a></span>
 							</h3>
 						</td>
 						<td style="width: 16%">
