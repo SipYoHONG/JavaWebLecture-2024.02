@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+	    <div class="container-fluid">
+	        <a class="navbar-logo mx-5" href="#"><img src="#" height="36" alt="Logo"></a>
+	
+	        <div class="collapse navbar-collapse">
+	            <ul class="navbar-nav ms-auto">
+	                <li class="nav-item">
+	                    <c:if test="${empty sessUid}">
+	                        <a class="nav-link" href="#">
+	                            <i class="fas fa-sign-in-alt"></i> 로그인</a>
+	                    </c:if>
+	                    <c:if test="${not empty sessUid}">
+	                        <a class="nav-link" href="#">
+	                            <i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+	                        <span class="navbar-text me-3">${sessUname}님 환영합니다.</span>
+	                    </c:if>
+	                </li>
+	
+	                <li class="nav-item dropdown ms-3">
+	                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+	                        <i class="fa-solid fa-brain"></i> 카테고리
+	                    </a>
+	                    <ul class="dropdown-menu">
+	                        <li><a class="dropdown-item" href="#">스키</a></li>
+	                        <li><a class="dropdown-item" href="#">보드</a></li>
+	                    </ul>
+	                </li>
+	
+	                <li class="nav-item">
+	                    <div class="nav-search-bar">
+	                        <input type="text" name="search" placeholder="검색어를 입력하세요">
+	                        <button type="button">검색</button>
+	                    </div>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</nav>

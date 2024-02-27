@@ -1,0 +1,36 @@
+Routing table(Uesr),,,,,
+,,,,,
+"path
+(/jw/ch09 는 공통)",method,입력 파라메터,"Viewer
+다음 행선지",넘겨줄 파라메터,설  명
+/user/list,GET,page,list viewer,List<User> list,list.jsp
+/user/register,GET,,register viewer,,register.jsp
+,POST,"uid, pwd, pwd2, 
+uname, email",/user/list?page=1,,"session의
+currentUserPage"
+/user/login,GET,,login viewer,,
+,POST,"uid, pwd",/user/list?page=1,,"sessUid, sessUname
+등록"
+/user/logout,GET,,/user/list?page=1,,
+/user/update,GET,uid,update viewer,User user,update.jsp
+,POST,"uid, uname, email,
+pwd, pwd2",/user/list?page=1,,"pwd, pwd2가 null이
+아니면서 동일한 경우
+패스워드 변경함"
+/user/delete,GET,uid,/user/list?page=1,,
+,,,,,
+,,,,,
+Routing table(Board),,,,,
+,,,,,
+"path
+(/jw/bbs)",method,입력 파라메터,"Viewer
+다음 행선지",넘겨줄 파라메터,설  명
+/board/list,GET,"page,field,query",list viewer,List<Board> boardList,/board/list.jsp
+/board/insert,GET,,insert viewer,,insert.jsp
+,POST,"sessUid,title,content",/board/list?p=1,board,
+/board/detail,GET,"bid , uid",detail viewer,board,uid가 sessUid와 다르면 글을 수정할수없다.
+,,,,,
+,,,,,
+/board/update,GET,bid,update viewer,Board board,/board/update.jsp
+,POST,"bid,uid,title,content","/board/detail?bid= "" + bid + ""&uid="" + uid",,
+/board/delete,GET,"bid,page,field,query","/board/list?p="" + page + ""&f="" + field + ""&q="" + query",,"session에서 page,field,query값할당받아서 가져옴"

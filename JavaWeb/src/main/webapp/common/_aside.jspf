@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 			<div class="col-3">
 				<img src="https://picsum.photos/256/256" class="rounded-circle" width="90%">

@@ -23,14 +23,13 @@
 	
 	<div class="container" style="margin-top:80px">
 		<div class="row">
-			<%@ include file="../common/_aside.jspf" %>
+
 			
 			<div class="col-9">
 				<table class="table table-sm table-borderless">
 					<tr>
 						<td style="width: 52%; text-align: left">
 							<h3><strong class="me-5">게시글 목록</strong>
-								<span style="font-size:16px"><a href="/jw/bbs/board/insert"><i class="fa-solid fa-pen-to-square"></i> 글 쓰기</a></span>
 							</h3>
 						</td>
 						<td style="width: 16%">
@@ -42,7 +41,7 @@
 						</td>
 						<td style="width: 24%">
 						<c:if test="${empty query}">
-							<input class="form-control" type="text" id="query" placeholder="검색할 내용">
+							<input class="form-control" type="text" id="query" placeholder="검색">
 						</c:if>
 						<c:if test="${not empty query}">
 							<input class="form-control" type="text" id="query" value="${query}">
@@ -51,17 +50,20 @@
 						<td style="width: 8%">
 							<button class="btn btn-outline-primary" onclick="search()">검색</button>
 						</td>
+						<td>
+							<span style="font-size:16px"><a href="#"><i class="fa-solid fa-pen-to-square"></i> 장비 견적내기</a></span>
+						</td>
 					</tr>
 				</table>
 				<hr>
 				
 				<table class="table">
 					<tr>
-						<th style="width: 8%">ID</th>
-						<th style="width: 52%">제목</th>
-						<th style="width: 14%">글쓴이</th>
-						<th style="width: 16%">수정시간</th>
-						<th style="width: 10%">조회수</th>
+						<th style="width: 8%">번호</th>
+						<th style="width: 52%">경매시간</th>
+						<th style="width: 14%">제목</th>
+						<th style="width: 16%">현재가</th>
+						<th style="width: 10%">유저명</th>
 					</tr>
 					<c:forEach var="board" items="${boardList}">
 					<tr>
