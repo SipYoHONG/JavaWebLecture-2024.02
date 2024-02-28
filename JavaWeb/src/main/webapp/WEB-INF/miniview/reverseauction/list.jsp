@@ -56,7 +56,7 @@
 				
 				<table class="table">
 					<tr>
-						<th style="width: 8%">ID</th>
+						<th style="width: 8%"></th>
 						<th style="width: 52%">제목</th>
 						<th style="width: 14%">글쓴이</th>
 						<th style="width: 16%">수정시간</th>
