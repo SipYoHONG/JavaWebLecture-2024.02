@@ -41,8 +41,8 @@ public class UserController extends HttpServlet {
 			request.setAttribute("userList", userlist);
 			
 			// for pagination
-			int totalUsers = uSvc.getUserCount();
-			int totalPages = (int)Math.ceil(totalUsers * 1.0 / uSvc.COUNT_PER_PAGE);
+			int totaluser = uSvc.getUserCount();
+			int totalPages = (int)Math.ceil(totaluser * 1.0 / uSvc.COUNT_PER_PAGE);
 			List<String> pageList = new ArrayList<String>();	
 			for (int i = 1; i <= totalPages; i++) 
 				pageList.add(String.valueOf(i));
