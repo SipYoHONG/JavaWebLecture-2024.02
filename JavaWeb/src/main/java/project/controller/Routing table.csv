@@ -34,3 +34,34 @@ Routing table(Board),,,,,
 /board/update,GET,bid,update viewer,Board board,/board/update.jsp
 ,POST,"bid,uid,title,content","/board/detail?bid= "" + bid + ""&uid="" + uid",,
 /board/delete,GET,"bid,page,field,query","/board/list?p="" + page + ""&f="" + field + ""&q="" + query",,"session에서 page,field,query값할당받아서 가져옴"
+,,,,,
+,,,,,
+,,,,,
+Routing table(auctiondb),,,,,
+,,,,,
+"path
+(/jw/auctiondb)",method,입력 파라메터,"Viewer
+다음 행선지",넘겨줄 파라메터,설  명
+/user/list,GET,page,list viewer,List<User> list,list.jsp
+user/signup,GET,"user_id, password, password2, uname, email, phone_number","/WEB-INF/miniview/user/signup.jsp,  /common/alertMsg.jsp , /jw/auctiondb/user/list?page=1","user_id, password, password2, uname, email, phone_number","signup.jsp 이쪽으로는 회원가입 폼을 보여주는거 /common/alertMsg.jsp 이쪽은 오류 ,/jw/auctiondb/user/list?page=1 이쪽은 정상경로"
+/user/update,GET,user_id,update viewer,User user,update.jsp
+,POST,"user_id, uname, email,
+ password, password2",/user/list?page=1,,"password, password2가 null이
+아니면서 동일한 경우
+패스워드 변경함"
+,,,,,
+/user/logout,GET,,/user/list?page=1,,
+/user/login,GET,,login viewer,,
+,POST,"user_id, password",/user/list?page=1,,"sessUid, sessUname
+등록"
+Routing table(auctiondb),,,,,
+,,,,,
+"path
+(/jw/mini)",method,입력 파라메터,"Viewer
+다음 행선지",넘겨줄 파라메터,설  명
+aDetail,GET,"auction_id, auctions, discount",/WEB-INF/miniview/auctions/aDetail.jsp,auction,aDetail.jsp
+aInsert,GET,,/WEB-INF/miniview/auctions/aInsert.jsp,,
+aInsert,POST,"""title"", ""start_price"", ""content"", ""imgFile""",/jw/mini/aList?p=1,acution Auction,
+aList,GET,page,pageList,,aList.jsp
+auctions,get,"auction_id, current_price","/jw/mini/aDetail?auction_id="" + auction_id",auctions Auctions,이미지 업로드 용
+view,get,fname,,,
